@@ -181,3 +181,9 @@
               (add-hook 'after-save-hook
                         'counsel-etags-virtual-update-tags 'append 'local)))
   )
+
+;; Use ibuffer for buffer management
+(use-package ibuffer
+  :defer nil
+  :bind
+  ("C-x C-b" . ibuffer))
