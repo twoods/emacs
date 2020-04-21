@@ -149,12 +149,14 @@
 (use-package counsel
              :defer nil
              :diminish (counsel-mode . "")
-             :config
-             ;; :bind
+	     :bind
+	     (:map counsel-mode-map
+		   ([remap yank-pop] . nil))
              ;; (("C-x C-f" . counsel-find-file)
              ;;  ("C-h f" . counsel-describe-function)
              ;;  ("C-h v" . counsel-describe-variable)
              ;;  ("M-y" . counsel-yank-pop))
+             :config
              (counsel-mode 1))
 
 ;; Try counsel for tags
