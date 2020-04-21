@@ -1,10 +1,16 @@
 ;; Basic load path and custom settings setup
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
 
 ;; Add package sources
 (package-initialize)
+
+;; Allow local customization of package archives
+(require 'local-packages nil t)
+
+;; Add default melpa and org archives if not customized
 (unless (assoc-default "melpa" package-archives)
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
 ;; (unless (assoc-default "org" package-archives)
@@ -13,9 +19,6 @@
 ;; On first load, fetch package lists
 (when (not package-archive-contents)
   (package-refresh-contents))
-
-;; Add local elisp
-(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Set up use package
 (unless (package-installed-p 'use-package)
