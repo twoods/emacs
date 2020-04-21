@@ -109,6 +109,10 @@
 ;; Modeline cleanup
 (use-package diminish)
 
+;; flx/smex for better ivy matching
+(use-package flx)
+(use-package smex)
+
 ;; Ivy for completion
 (use-package ivy
              :defer nil
