@@ -51,7 +51,10 @@
 (setq mouse-yank-at-point t)
 
 ;; Highlight trailing whitespace
-(setq show-trailing-whitespace t)
+(setq-default show-trailing-whitespace t)
+
+;; Default to indent with spaces
+(setq-default indent-tabs-mode nil)
 
 ;; Themes
 ;; (use-package gruvbox-theme)
