@@ -187,3 +187,9 @@
   :defer nil
   :bind
   ("C-x C-b" . ibuffer))
+
+;; C setup
+(use-package cc-mode
+  :ensure nil
+  :config
+  (require 'local-cstyle nil t))
