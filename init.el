@@ -13,8 +13,8 @@
 ;; Add default melpa and org archives if not customized
 (unless (assoc-default "melpa" package-archives)
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
-;; (unless (assoc-default "org" package-archives)
-;;   (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t))
+(unless (assoc-default "org" package-archives)
+  (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t))
 
 ;; On first load, fetch package lists
 (when (not package-archive-contents)
