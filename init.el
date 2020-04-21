@@ -128,14 +128,16 @@
              (setq ivy-height 10)
              ;; does not count candidates
              (setq ivy-count-format "")
+             ;; disabled below for better order matching
              ;; no regexp by default
-             (setq ivy-initial-inputs-alist nil)
+             ;; (setq ivy-initial-inputs-alist nil)
              ;; configure regexp engine
-             (setq ivy-re-builders-alist
-                   ;; allow input not in order
-                   ;; '((t . ivy--regex-ignore-order))
-                   '((t . ivy--regex-fuzzy))
-                   ))
+             ;; (setq ivy-re-builders-alist
+             ;;       ;; allow input not in order
+             ;;       ;; '((t . ivy--regex-ignore-order))
+             ;;       '((t . ivy--regex-fuzzy))
+             ;;       )
+             )
 
 ;; Swiper for search
 ;; TODO: Try this out vs standard search
