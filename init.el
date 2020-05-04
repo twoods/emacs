@@ -42,6 +42,9 @@
 ;; Put backups in emacs directory, not inline
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
+;; Disable startup message
+(setq inhibit-startup-message t)
+
 ;; Turn off toolbar
 (tool-bar-mode -1)
 
