@@ -64,6 +64,9 @@
 ;; Default to indent with spaces
 (setq-default indent-tabs-mode nil)
 
+;; Highlight matching parens
+(show-paren-mode 1)
+
 ;; Themes
 ;; (use-package gruvbox-theme)
 ;; (load-theme 'gruvbox)
@@ -195,6 +198,17 @@
   :defer nil
   :bind
   ("C-x C-b" . ibuffer))
+
+;; Paredit
+(use-package paredit
+  :hook ((emacs-lisp-mode
+          lisp-mode
+          eval-expression-minibuffer-setup
+          lisp-interaction-mode) . enable-paredit-mode)
+  :config
+  (progn
+    (with-eval-after-load "eldoc"
+      (eldoc-add-command #'paredit-backward-delete #'paredit-close-round))))
 
 ;; C setup
 (use-package cc-mode
