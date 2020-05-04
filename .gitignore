@@ -1,5 +1,6 @@
 auto-save-list
 backups
+cider-history
 custom.el
 elpa
 places

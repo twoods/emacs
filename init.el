@@ -215,3 +215,22 @@
   :ensure nil
   :config
   (require 'local-cstyle nil t))
+
+;; Clojure
+(use-package clojure-mode
+  :ensure t
+  :mode ("\\.clj\\'" "\\.edn\\'" "\\.boot\\'" "\\.cljs.*\\'")
+  :hook ((clojure-mode . enable-paredit-mode)
+         (clojure-mode . subword-mode)))
+
+;; CIDER
+(use-package cider
+  :ensure t
+  :hook ((cider-mode . eldoc-mode)
+         (cider-repl-mode . paredit-mode))
+  :config
+  (setq cider-repl-pop-to-buffer-on-connect t
+        cider-show-error-buffer t
+        cider-auto-select-error-buffer t
+        cider-repl-history-file "~/.emacs.d/cider-history"
+        cider-repl-wrap-history t))
