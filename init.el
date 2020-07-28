@@ -237,3 +237,11 @@
         cider-auto-select-error-buffer t
         cider-repl-history-file "~/.emacs.d/cider-history"
         cider-repl-wrap-history t))
+
+;; LSP
+(use-package flycheck)
+(use-package lsp-ui
+  :ensure t
+  :init
+  (setq lsp-clients-clangd-executable "/usr/lib/llvm-10/bin/clangd")
+  :hook (c-mode-common . lsp))
