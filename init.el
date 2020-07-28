@@ -45,6 +45,9 @@
 ;; Disable startup message
 (setq inhibit-startup-message t)
 
+;; Do not inherit X resources
+(setq inhibit-x-resources t)
+
 ;; Turn off toolbar
 (tool-bar-mode -1)
 
