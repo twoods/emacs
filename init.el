@@ -245,3 +245,7 @@
   :init
   (setq lsp-clients-clangd-executable "/usr/lib/llvm-10/bin/clangd")
   :hook (c-mode-common . lsp))
+
+;; CMake
+(use-package cmake-font-lock
+  :hook ((cmake-mode . cmake-font-lock-activate)))
