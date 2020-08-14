@@ -250,7 +250,14 @@
 (use-package cmake-font-lock
   :hook ((cmake-mode . cmake-font-lock-activate)))
 
-;; Google C++ style
+;; Custom Google-based C++ style
+(defconst key-style
+  '("google"
+    (c-basic-offset . 4)))
+
 (use-package google-c-style
   :mode ("\\.h\\'" . c++-mode)
-  :hook (c-mode-common . google-set-c-style))
+  :hook (c-mode-common .
+                       (lambda ()
+                         (google-set-c-style)
+                         (c-add-style "key" key-style t))))
