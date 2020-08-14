@@ -253,4 +253,4 @@
 ;; Google C++ style
 (use-package google-c-style
   :mode ("\\.h\\'" . c++-mode)
-  :hook (c-mode-common-hook . google-set-c-style))
+  :hook (c-mode-common . google-set-c-style))
