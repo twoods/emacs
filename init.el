@@ -249,3 +249,8 @@
 ;; CMake
 (use-package cmake-font-lock
   :hook ((cmake-mode . cmake-font-lock-activate)))
+
+;; Google C++ style
+(use-package google-c-style
+  :mode ("\\.h\\'" . c++-mode)
+  :hook (c-mode-common-hook . google-set-c-style))
