@@ -242,8 +242,6 @@
 (use-package flycheck)
 (use-package lsp-ui
   :ensure t
-  :init
-  (setq lsp-clients-clangd-executable "/usr/lib/llvm-10/bin/clangd")
   :hook (c-mode-common . lsp))
 
 ;; CMake
