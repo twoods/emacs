@@ -251,7 +251,9 @@
 ;; Custom Google-based C++ style
 (defconst key-style
   '("google"
-    (c-basic-offset . 4)))
+    (c-basic-offset . 4)
+    (c-offsets-alist
+     . ((access-label . (add - 1))))))
 
 (use-package google-c-style
   :mode ("\\.h\\'" . c++-mode)
