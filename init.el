@@ -227,6 +227,9 @@
 ;; C setup
 (use-package cc-mode
   :ensure nil
+  :bind
+  (:map c-mode-base-map
+        ("C-c o" . ff-find-other-file))
   :config
   (require 'local-cstyle nil t))
 
