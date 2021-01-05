@@ -218,8 +218,13 @@
   :ensure t
   :init
   (yas-global-mode 1)
+  :bind
+  (:map yas-minor-mode-map
+        ("TAB" . nil)
+        ("<tab>" . nil))
   :config
-  (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "snippets")))
+  (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "snippets"))
+  (add-to-list 'hippie-expand-try-functions-list 'yas-hippie-try-expand))
 
 (use-package yasnippet-snippets
   :after yasnippet)
