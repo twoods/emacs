@@ -4,11 +4,6 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
 
-;; Set up Mac modifier keys
-(when (eq system-type 'darwin)
-  (setq mac-command-modifier 'control
-        mac-control-modifier 'command))
-
 ;; Add package sources
 (package-initialize)
 
