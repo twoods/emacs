@@ -251,6 +251,9 @@
 ;; Jenkinsfile
 (use-package jenkinsfile-mode)
 
+;; Dockerfile
+(use-package dockerfile-mode)
+
 ;; CIDER
 (use-package cider
   :ensure t
