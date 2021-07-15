@@ -248,6 +248,9 @@
   :hook ((clojure-mode . enable-paredit-mode)
          (clojure-mode . subword-mode)))
 
+;; Jenkinsfile
+(use-package jenkinsfile-mode)
+
 ;; CIDER
 (use-package cider
   :ensure t
