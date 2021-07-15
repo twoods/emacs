@@ -47,6 +47,9 @@
 ;; Turn off toolbar
 (tool-bar-mode -1)
 
+;; Show column numbers
+(setq column-number-mode t)
+
 ;; Pixel scroll mode - TODO try this and see if it works well
 (when (>= emacs-major-version 26)
   (pixel-scroll-mode))
