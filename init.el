@@ -60,6 +60,10 @@
 ;; Paste text at cursor
 (setq mouse-yank-at-point t)
 
+;; Suport mouse in terminal
+(when (eq window-system nil)
+  (xterm-mouse-mode t))
+
 ;; Highlight trailing whitespace
 (setq-default show-trailing-whitespace t)
 
