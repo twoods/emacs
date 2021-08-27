@@ -232,6 +232,12 @@
 (use-package yasnippet-snippets
   :after yasnippet)
 
+;; git
+(use-package magit)
+;; Ensure command line git commit uses mode
+(use-package git-commit
+  :demand)
+
 ;; C setup
 (use-package cc-mode
   :ensure nil
