@@ -238,6 +238,11 @@
 (use-package git-commit
   :demand)
 
+;; Compilation setup
+(use-package compile
+  :init
+  (setq compilation-scroll-output 'first-error))
+
 ;; C setup
 (use-package cc-mode
   :ensure nil
