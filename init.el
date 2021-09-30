@@ -281,7 +281,8 @@
 (use-package flycheck)
 (use-package lsp-ui
   :ensure t
-  :hook (c-mode-common . lsp))
+  :hook ((c-mode . lsp)
+         (c++-mode . lsp)))
 
 ;; CMake
 (use-package cmake-font-lock
