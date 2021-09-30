@@ -288,6 +288,9 @@
 (use-package cmake-font-lock
   :hook ((cmake-mode . cmake-font-lock-activate)))
 
+;; Protocol Buffers
+(use-package protobuf-mode)
+
 ;; Custom Google-based C++ style
 (defconst key-style
   '("google"
