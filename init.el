@@ -284,6 +284,11 @@
   :hook ((c-mode . lsp)
          (c++-mode . lsp)))
 
+;; clang-format
+(use-package clang-format
+  :config
+  (setq clang-format-style "file"))
+
 ;; CMake
 (use-package cmake-font-lock
   :hook ((cmake-mode . cmake-font-lock-activate)))
