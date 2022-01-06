@@ -4,5 +4,7 @@ cider-history
 custom.el
 elpa
 places
+projects
 recentf
 smex-items
+transient
