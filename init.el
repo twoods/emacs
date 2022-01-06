@@ -29,6 +29,10 @@
 (setq use-package-always-defer t)
 (require 'use-package)
 
+;; site customizations
+(setq custom-snippet-dirs '())
+(load "~/.emacs.site/site" t)
+
 ;; autocompile elisp files
 (use-package auto-compile
              :defer nil
@@ -226,7 +230,8 @@
         ("TAB" . nil)
         ("<tab>" . nil))
   :config
-  (add-to-list 'yas-snippet-dirs (locate-user-emacs-file "snippets"))
+  (setq yas-snippet-dirs (append custom-snippet-dirs yas-snippet-dirs))
+  (yas-reload-all)
   (add-to-list 'hippie-expand-try-functions-list 'yas-hippie-try-expand))
 
 (use-package yasnippet-snippets
