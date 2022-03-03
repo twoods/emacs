@@ -48,8 +48,9 @@
 ;; Do not inherit X resources
 (setq inhibit-x-resources t)
 
-;; Turn off toolbar
+;; Turn off toolbar and menubar
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 
 ;; Show column numbers
 (setq column-number-mode t)
